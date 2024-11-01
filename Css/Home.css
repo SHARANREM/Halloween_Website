@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Griffy&family=Indie+Flower&family=Ms+Madi&family=Pacifico&family=Permanent+Marker&display=swap');
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background: radial-gradient(circle, #04181C 90%, #000000 110%);
+}
+.animation{
+    background-image: url('/assests/Loading img.gif');
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    background-position: center;
+    animation: loading .1s forwards ease;
+    animation-delay: 3s;
+}
+@keyframes loading {
+    100%{
+        display: none;
+    }
+}
+.home{
+    width: 100%;
+    height: 100vh;
+}
+.conat{
+    position: absolute;
+    background-image: url("/assests/BG Home.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+}
+.home nav{
+    width: 100%;
+    background-color: #FF6500;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    animation: dropDown 2s forwards ease;
+    animation-delay: 3s;
+}
+.home .logo{
+    display: flex;
+    padding: 10px;
+    text-decoration: underline wavy white;
+    font-family: "Griffy", serif;
+    font-size: 1.2em;
+    align-items: center;
+    gap: 10%;    
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+.home nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.home nav li{
+    height: 50px;
+}
+.home nav a{
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 900;
+    text-underline-offset: 6px;
+    text-decoration: underline dashed;
+    color: white;
+    border-radius: 20px;
+    font-family: "Griffy", serif;
+    transition: 0.3s ease;
+}
+.home nav a:hover{
+    text-decoration: underline wavy;
+    background-color: #b64900; 
+    transform: scale(1.1);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    display: none;
+    background-color:  #ff660086;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    border: white 3px dashed;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.sidebar li{
+    list-style: none;
+    width: 100%;
+}
+.menu{
+    display: none;
+}
+.sidebar li a{
+    color: white;
+    text-decoration: underline dashed;
+    font-family: "Griffy", serif;
+    font-size: 1.6em;
+    border-radius: 20px;
+    text-align: center;
+    text-underline-offset: 6px;
+    display: block;
+    width: 100%;
+}
+.sidebar img{
+    margin: 5px 10px;
+}
+.sidebar li a:hover{
+    text-decoration: underline wavy;
+    background-color: #b64900; 
+    transform: scale(1.1);
+}
+@media all and (max-width:950px) {
+    .home nav a{
+        padding: 0 15px;
+    }
+}
+
+
+@media all and (max-width:530px) {
+    .sidebar{
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 70%;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    align-items: center;
+    transform: translate(-50%,-50%);
+}
+.Container .Topic{
+    color: #FF6500;
+    font-size: 2.1em;
+    font-family: "Griffy", serif;
+    animation: fadeColor 2s ease forwards;
+    animation-delay: 3s;
+}
+.Container .Sub{
+    color: white;
+    font-family: "Griffy", serif;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 500;
+    animation: fadeColor 2s ease forwards;
+    animation-delay: 3s;
+}
+.Container .Go a button{
+    width: 150px;
+    height: 40px;
+    background-color: #FF6500;
+    color: white;
+    font-family: "Griffy", serif;
+    font-size: 1.5em;
+    border: none;
+    margin-top: 50px;
+    font-weight: 600;
+    text-shadow: 11px 11px 10px black;
+    border-radius: 5px;
+    transition: .5s ease;
+    animation: rotateIn 2s ease-in forwards;
+    animation-delay: 3s;
+}
+.Container .Go button:hover{
+    transform: scale(1.1);
+    background: linear-gradient(to right, #FF6500, red);
+}
+@media all and (max-width:820px) {
+    .home nav ul{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .Container .Sub{
+        font-size: 1.5em;
+    }
+}
+@media all and (max-width:660px) {
+    .Container{
+        width: 90%;
+        
+    }
+}
+@media all and (max-width:350px) {
+    .home .logo{
+        font-size: 0.7em;
+    }
+    .Container .Topic{
+        font-size: 1.6em;
+    }
+}
+@keyframes dropDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes rotateIn {
+    0% {
+        transform: rotate(-10deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+@keyframes fadeColor {
+    0% {
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 1);
+    }
+    100% {
+        opacity: 1;
+        background-color: transparent;
+    }
+}

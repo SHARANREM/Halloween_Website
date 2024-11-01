@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Griffy&family=Indie+Flower&family=Ms+Madi&family=Pacifico&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Concert+One&family=Griffy&family=Indie+Flower&family=Metal+Mania&family=Ms+Madi&family=Pacifico&family=Permanent+Marker&display=swap');
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    animation: overf 2s step-end forwards;
+}
+@keyframes overf {
+    0%{
+        overflow: hidden;
+    }
+    100%{
+        overflow: visible;
+    }
+}
+body{
+    background-color: black;
+}
+.animation{
+    background-image: url('/assests/Load.gif');
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    background-position: center;
+    animation: loading .1s forwards ease;
+    animation-delay: 2s;
+    
+}
+@keyframes loading {
+    100%{
+        display: none;
+    }
+}
+.conat{
+    position: absolute;
+    background-image: url("/assests/LandBg.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+}
+
+.head{
+    width: 100%;
+    display: flex;
+    padding: 20px 15px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+    animation: headani 1s ease forwards;
+    animation-delay: 2s;
+}
+@keyframes headani{
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.head .Logo{
+    width: 45%;
+    display: flex;
+    padding: 0px 30px;
+    gap: 10px;
+    align-items: center;
+    
+}
+.head .Logo img{
+    background-color: white;
+    border-radius: 20px;
+}
+.head .Logo h1{
+    color: white;
+    font-family: "Metal Mania", system-ui;
+    font-size: 2.9em;
+}
+.head nav{
+    
+    width: 50%;
+}
+.head nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+.head nav ul li{
+    padding: 0px 30px;
+    text-align: center;
+}
+.head nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+.head nav ul li a:hover{
+    color: black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    margin-top: 5%;
+    transition: 1s ease;
+}
+.menu{
+    display: none;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    padding-right: 5%;
+    justify-content: center;
+    animation: leftani 1s ease forwards;
+    animation-delay: 2s;
+}
+@keyframes leftani{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.left h1{
+    font-family: "Metal Mania", system-ui;
+    color: white;
+    font-size: 8rem;
+    font-weight: 500;
+}
+.left p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.1em;
+}
+.left button{
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 3%;
+    transition: .3s ease-in-out;
+}
+.left button:hover{
+    transform: scale(1.1);
+}
+.Container .right{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    
+}
+.right .me{
+    width: 40%;
+    height: 35vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    position: relative;
+    transition: transform 0.9s ease;
+}
+
+
+
+.history{
+    background-image: url('/assests/History.gif');
+    background-color: black;
+    animation: scaleUp 2s ease forwards;
+    animation-delay: 2s;
+}
+.costume{
+    background-image: url('/assests/Costume.gif');
+    background-color: #6f53bf;
+    animation: scaleUp 4s ease forwards;
+    animation-delay: 2s;
+}
+.fun{
+    background-image: url('/assests/Games.gif');
+    background-color: #1f0849;
+    animation: scaleUp 2s ease forwards;
+    animation-delay: 2s;
+}
+.food{
+    background-image: url('/assests/Food.gif');
+    background-color: #110d3b;
+    animation: scaleUp 4s ease forwards;
+    animation-delay: 2s;
+}
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.history:hover,.food:hover,.fun:hover,.costume:hover{
+    top: -10px;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.384);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    border: white 3px dashed;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.sidebar nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 250px;
+    padding: 0;
+}
+.sidebar nav li {
+    list-style: none;
+    width: 100%;
+}
+.sidebar nav ul li a {
+    display: block; 
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    border-radius: 20px;
+    text-align: center;
+    text-underline-offset: 6px;
+    width: 100%; 
+    padding: 15px 0;
+}
+.sidebar img{
+    margin: 15px 10px;
+}
+.sidebar nav li a:hover{
+    
+    background-color: rgba(255, 255, 255, 0.445); 
+    transform: scale(1.1);
+}
+@media all and (max-width:1160px){
+    .left h1{
+        font-size: 6rem;
+    }
+}
+@media all and (max-width:930px){
+    .Container{
+        grid-template-columns: 1fr;
+    }
+    .Container .right{
+        margin-top: 5%;
+        justify-content: center;
+    }
+    .left button{
+        position: relative;
+    }
+    .menu{
+        display: inline;
+    }
+    .head nav{
+        display: none;
+    }
+    .head .Logo{
+        width: 100%;
+    }
+
+
+}
+@media all and (max-width:560px){
+    .right .me{
+        width: 80%;
+    }
+    .left h1{
+        font-size: 4rem;
+    }
+    .head .Logo h1{
+        font-size: 2.2rem;
+    }
+    .sidebar{
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media all and (max-width:365px){
+    .left h1{
+        font-size: 3rem;
+    }
+    .left p{
+        font-size: 1rem;
+    }
+    .head .Logo h1{
+        font-size: 1.2rem;
+    }
+}
