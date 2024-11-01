@@ -1,6 +1,6 @@
 # 🎃 Halloween Website Project
 
-A festive Halloween website designed for [Hackathon Name]! It features costume ideas, a timeline of Halloween history, and interactive music to enhance the spooky experience.
+A festive Halloween website designed for Hackathon! It features costume ideas, a timeline of Halloween history, and interactive music to enhance the spooky experience.
 
 ## 🎨 Features
 
@@ -16,18 +16,6 @@ A festive Halloween website designed for [Hackathon Name]! It features costume i
    ```
 2. **Open the project**: Launch `index.html` in your browser.
 
-## 📂 Structure
-
-```
-.
-├── index.html          # Main HTML page
-├── style.css           # CSS styling
-├── main.js             # JavaScript for interactivity
-├── images/             # Images for costumes, buttons, etc.
-└── audio/              # Background music file
-```
-
----
 
 ## 👻 License
 
